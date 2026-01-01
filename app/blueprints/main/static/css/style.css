@@ -1,3 +1,19 @@
+:root {
+    /* Brand Colors */
+    --color-sage: #48615b;
+    --color-cream: #fbf3d9;
+    --color-not-white: #fdfaf0;
+    
+    --header-footer-bg-color: var(--color-sage);
+    --header-footer-txt-color: var(--color-cream);
+    --main-bg-color: var(--color-not);
+    --button-bg-color: var(--color-sage);
+    --button-txt-color: var(--color-cream);
+    --button-onclick-color: #61474D;
+    --link-txt-color: #0566b8;
+    --link-hover-txt-color: #eeb230;
+}
+
 body {
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
@@ -29,8 +45,8 @@ h1,h2,h3,h4,h5,h6 {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     padding: 1rem;
     /* background-color: #eeb230; */
-    background-color: #48615b;
-    color: #fbf3d9;
+    background-color: var(--header-footer-bg-color);
+    color: var(--header-footer-txt-color);
 }
 
 .header {
@@ -105,7 +121,7 @@ nav ul {
 .nav-links {
     display: flex;
     justify-content: end;
-    background-color: #48615b;
+    background-color: var(--header-footer-bg-color);
 }
 
 .nav-link {
@@ -113,7 +129,7 @@ nav ul {
     display: inline-block;
     transition: transform .2s ease, color .2s ease;
     font-size: 13pt;
-    color: #fbf3d9;
+    color: var(--header-footer-txt-color);
 }
 
 .nav-link:visited {
@@ -146,9 +162,9 @@ nav li {
     font-weight: bold;
     /* background-color: #F1F3F4; */
     /* background-color: #eeb230; */
-    background-color: #48615b;
+    background-color: var(--button-bg-color);
     /* background-color: #61474D; */
-    color: #fbf3d9;
+    color: var(--button-txt-color);
     text-shadow:
         1px 0 #413324,
         -1px 0 #413324,
@@ -159,7 +175,7 @@ nav li {
         1px -1px #413324,
         -1px 1px #413324;
     text-decoration: none;
-    border: 6px solid #fbf3d9;
+    border: 6px solid var(--button-txt-color);
     border-radius: 30px;
     box-sizing: border-box;
     padding: .75rem 1rem;
@@ -176,7 +192,7 @@ nav li {
 
 .button-styles:active {
     /* background-color: #df9f13; */
-    background-color: #61474D;
+    background-color: var(--button-onclick-color);
     box-shadow: 
         3px rgba(0, 0, 0, 0.4),
         inset 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -186,7 +202,7 @@ nav li {
 .main-content {
     display: flex;
     flex: 1;
-    background-color: #fdfaf0;
+    background-color: var(--main-bg-color);
     flex-direction: column;
     align-items: center;
 }
@@ -253,12 +269,28 @@ h2 {
     align-self: center;
 }
 
+.simple-link {
+    color: var(--link-txt-color);
+}
+
+.simple-link:visited {
+    color: var(--link-txt-color);
+}
+
+.simple-link:hover {
+    color: var(--link-hover-txt-color);
+}
+
 .page-content a {
-    color: #0566b8;
+    color: var(--link-txt-color);
 }
 
 .page-content a:hover {
-    color: #eeb230;
+    color: var(--link-hover-txt-color);
+}
+
+.page-content a:visited {
+    color: var(--link-txt-color);
 }
 
 .page-content ul li {

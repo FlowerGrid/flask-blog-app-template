@@ -50,3 +50,15 @@ These helper functions gather form data and store it in the database, and pulls 
 This is where you build the forms gathering the data that goes into the database. 
 ### /storage
 This is where the different storage tactics live. Each tactic is a class with a single method "save()" which the app reads for storing uploads based on the ENV_NAME in your environment variables. The default for production is gcs. For now there are classes for local storage (development) and storing images on google cloud storage. If you save images somewhere else you'll need to add that logic here as a class with a method called "save()".
+## Customization
+### Header/Footer content
+The header and footer are in the base.html template.
+<br>Here you can
+* Add/remove/Edit nav links
+* Edit Your tagline H2
+* Edit Site's catch phrase
+* Add whatever information you want to the footer (please don't remove my design credits)
+
+To edit the logo, You'll need to upload the image under settings in admin.
+### Style
+You can edit your custom brand colors right at the top of main/static/css file.
